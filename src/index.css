@@ -1,0 +1,25 @@
+:root {
+  font-family: Cormorant Garamond serif;
+  line-height: 1.5;
+  font-weight: 400;
+  box-sizing: border-box;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  --white: #FFFFFF;
+  --green: #D1F6E6;
+  --green-dark: #63BA96;
+  --brown: #DFD087;
+  --brown-dark: #84700F;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
