@@ -30,12 +30,12 @@ export const FLOWERS: Record<number, Flower> = {
 },
 2: {
   id: 2,
-  src: '6',
+  src: '2',
   description: 'Красивые цветы',
-  name: 'Букет “Любовь”',
-  price: 1800,
-  flowers: ['ROSES', 'DAHLIAS'],
-  inStock: 1
+  name: 'Букет “Тюльпаны”',
+  price: 2500,
+  flowers: ['TULIPS'],
+  inStock: 2
 },
 3: {
   id: 3,

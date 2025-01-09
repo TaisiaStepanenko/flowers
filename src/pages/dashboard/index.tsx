@@ -46,8 +46,12 @@ const Dashboard = () => {
   };
 
   const imageUpload = (src: string) => {
+    
     const reader = new FileReader();
+    if (!imageFile) return 
     reader.onloadend = () => {
+      if (typeof reader.result !== 'string') return
+ 
       const base64StringUS = reader?.result?.replace("data:", "").replace(/^.+,/, "");
       localStorage.setItem(src, base64StringUS);
     };

@@ -34,7 +34,7 @@ const Flower = () => {
             <Box width="100%" height="100%" border="1px solid var(--brown)" p={2}>
               <img
                 style={{ width: '100%' }}
-                src={`/public/flower_${flower.src}.png`}
+                src={!flower.isNew ? `/public/flower_${flower.src}.png` : `data:image/png;base64,${localStorage.getItem(flower.src)}`}
               />
             </Box>
           </Grid>
@@ -54,7 +54,7 @@ const Flower = () => {
                   >
                     <Box>
                       <Typography variant='h4' color="var(--brown-dark)">
-                        Стоимость: <span style={{ color: 'var(--green-dark)' }}>{flower.price}</span>
+                        Стоимость: <span style={{ color: 'var(--green-dark)' }}>{flower.price} p.</span>
                       </Typography>
                       <Typography variant='h4' color="var(--brown-dark)">
                         В наличии: <span style={{ color: 'var(--green-dark)' }}>{`${flower.inStock} ${numWord(flower.inStock, ["букет", "букета", "букетов"])}`}</span>

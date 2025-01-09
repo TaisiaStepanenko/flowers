@@ -11,6 +11,8 @@ const Container = ({ children }: { children: React.ReactNode }) => {
   const { pathname } = useLocation()
   const [user, logout] = useFlower(useShallow((store) => [store.user, store.logout]))
   const isAdmin = user?.role === 'ADMIN'
+  
+
 
   return (
     <StyledContainer>
@@ -25,7 +27,7 @@ const Container = ({ children }: { children: React.ReactNode }) => {
             Каталог
 
           </Button>}
-          {isAdmin &&
+          {isAdmin && user?.login &&
             <Button
               btnType='WHITE'
               variant='outlined'
@@ -34,7 +36,7 @@ const Container = ({ children }: { children: React.ReactNode }) => {
               Добавить букет
             </Button>
           }
-          {user &&
+          {user?.role != ' ' && 
             <Button
               btnType='WHITE'
               variant='outlined'
@@ -43,7 +45,8 @@ const Container = ({ children }: { children: React.ReactNode }) => {
               Корзина
             </Button>
           }
-          {user ?
+          { 
+              user ?
             <Button
               btnType='WHITE'
               variant='outlined'
@@ -51,7 +54,7 @@ const Container = ({ children }: { children: React.ReactNode }) => {
             >
               Выйти
             </Button> :
-            pathname !== '/auth'
+            pathname !== '/auth' 
               ?
               <Button
                 btnType='WHITE'

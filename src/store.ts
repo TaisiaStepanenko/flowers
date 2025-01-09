@@ -7,7 +7,7 @@ interface User  {
   password: string
   phone?: string
   email?: string
-  role: 'ADMIN' | 'USER'  
+  role: ' ' | 'ADMIN' | 'USER' 
 }
 
 export interface Flower {
@@ -39,8 +39,8 @@ type Store = {
 
 export const useFlower = create<Store>()(
   immer((set, get) => ({
-    users: [{login: 'ADMIN', password: 'ADMIN', role: 'ADMIN'}],
-    user: {login: 'ADMIN', password: 'ADMIN', role: 'ADMIN'},
+    users: [{login: ' ', password: ' ', role: ' '}, {login: 'ADMIN', password: 'ADMIN', role: 'ADMIN'}],
+    user: {login: 'ADMIN', password: 'ADMIN', role: ' '},
     flowers: FLOWERS,
     basket: {},
     register: (user, onSuccess, onError) => set((state) => {

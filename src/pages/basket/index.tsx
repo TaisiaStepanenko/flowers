@@ -44,7 +44,10 @@ const Basket = () => {
 
                     return (
                       <Box width="100%" border="1px solid var(--brown)" height={240} p={2} display="flex" gap={2}>
-                        <img src={`/public/flower_${flower.src}.png`} style={{ height: '100%' }} />
+                        <img
+                          src={!flower.isNew ? `/public/flower_${flower.src}.png` : `data:image/png;base64,${localStorage.getItem(flower.src)}`}
+                          style={{ height: '100%' }} 
+                        />
                         <Box
                           width="100%"
                           display="flex"

@@ -23,7 +23,7 @@ const Card = ({ flower }: { flower: Flower }) => {
       />
       <Box width="100%">
         <Typography variant='h5' color='var(--brown-dark)'>{flower.name}</Typography>
-        <Typography variant='h6' color='var(--brown-dark)'>{flower.price}</Typography>
+        <Typography variant='h6' color='var(--brown-dark)'>{flower.price} p.</Typography>
       </Box>
     </Box>
   )
